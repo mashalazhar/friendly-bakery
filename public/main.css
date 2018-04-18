@@ -18,7 +18,7 @@ body{
     bottom: 0;
     width: 100%;
     background-color: lightblue;
-    color: white;
+    color: GRAY;
     text-align: center;
  }
 
@@ -63,7 +63,9 @@ input[type=submit]:hover {
 div {
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px;
+    /* padding: 20px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* NAV BAR */
@@ -103,4 +105,28 @@ ul.topnav li.right {
 @media screen and (max-width: 600px){
     ul.topnav li.right, 
     ul.topnav li {float: none;}
+}
+
+/* GALLERY */
+
+#rcorners2 {
+  border-radius: 25px;
+  padding: 20px; 
+  padding-top: 50px;
+  width: 1000px;
+  height: 250px;
+  margin: auto;    
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
