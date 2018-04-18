@@ -7,13 +7,30 @@ class Bakery
         @muffins = []
         @cakes = []
     end
-
+      
     def addItem(item)
-        puts "I adding an item."
+
+        if item.class.name == "Cookies"
+            p "Cookies Available"
+            @cookies.push(item)
+                puts "I am adding a cookie."
+
+        # if @cookies[item.addItem]
+          
+        # elsif @muffins[item.addItem]
+        #     p "Muffins Available"
+        # @muffins.push(item)
+        #     puts "I am adding a muffin."
+        # else @cakes[item.addItem]
+        #     p "Cake Available"
+        # @cakes.push(item)
+        #     puts "I am adding a cake."
+        # end 
     end
+end
 end  
 
-class Cake 
+class Cookies 
     def initialize(name,description,price)
         @name = name
         @description = description
@@ -37,9 +54,13 @@ class Cakes
     end
 end
 
-choclate_cake = Cake.new('sdjsdsdlk')
+chocolate_cake = Cakes.new('choccake', 'choccakeisgood', 25)
 mashals_bakery = Bakery.new
 mashals_bakery.addItem(chocolate_cake)
+
+puts oatmeal = Cookies.new('thisisthename', 'thisisdescription', 35)
+mashals_bakery = Bakery.new
+mashals_bakery.addItem(oatmeal)
 
 
 
@@ -61,18 +82,13 @@ mashals_bakery.addItem(chocolate_cake)
 # # •	description
 # # •	price
  
-# # These objects represent digital versions of cookies, so now use these objects as data that you can utilize when displaying information about your cookies, cakes and muffins.
-# # Try using these objects to
-# # •	display information on price and description on the subcategory pages
-# # •	generate the catalog email to send to the requesting user
+# These objects represent digital versions of cookies, so now use these objects as data that you can utilize when displaying information about your cookies, cakes and muffins.
+# Try using these objects to
+# •	display information on price and description on the subcategory pages
+# •	generate the catalog email to send to the requesting user
  
-# # Completion Requirements:
-# # The completed assignment should:
-# # •	fulfill the design needs of the user
-# # o	it must look and feel like a bakery website
-# # •	have a front page that links out to subcategory pages
-# # •	have a page listing all cookies sold
-# # •	have a page listing all muffins sold
-# # •	have a page listing all cakes sold
-# # •	use the Sendgrid API to send an email to the user’s email with a catalog of all items sold
-# # o	API key should be stored in an environment variable
+# Completion Requirements:
+# •	have a page listing all cookies sold
+# •	have a page listing all muffins sold
+# •	have a page listing all cakes sold
+# •	use the Sendgrid API to send an email to the user’s email with a catalog of all items sold
