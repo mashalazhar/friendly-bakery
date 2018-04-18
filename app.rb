@@ -6,6 +6,9 @@ get '/' do
 end
 
 
+post '/contact' do
+    erb :contact
+end
 
 # Client Suggestions:
 # •	I want it to look and feel like a bakery website

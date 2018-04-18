@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+
+<ul class="topnav">
+  <li><a href="cakes.erb">CAKES</a></li>
+  <li><a href="cookies.erb">COOKIES</a></li>
+  <li><a href="muffins.erb">MUFFINS</a></li>
+  <li class="right"><a href="index.erb">FRIENDLY'S BAKERY HOME</a></li>
+</ul>
+
+<p> 
+
+<div class="footer">
+<div>
+  <form method="post" action="/contact">
+    <label for="name">ENTER YOUR E-MAIL BELOW FOR THE WEEKLY FLAVOR AND COMPLIMENTARY TASTY TREATS!</label>
+    <input type="text" id="name" name="name" placeholder="your e-mail address">
+    <input type="submit" value="SUBMIT">
+  </form>
+  </div>
+</div>
+
+<main>
+<%= yield %>
+</main>
+
+
+</body>
+<html>
