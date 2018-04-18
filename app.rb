@@ -1,23 +1,48 @@
 require 'sinatra'
 
 
-get '/' do
+get '/index' do
     erb :index
 end
 
+get '/cakes' do
+    erb :cakes
+end
+
+get '/cookies' do
+    erb :cookies
+end
+
+get '/muffins' do
+    erb :muffins
+end
 
 post '/contact' do
     erb :contact
 end
 
-# Client Suggestions:
-# •	I want it to look and feel like a bakery website
-# •	The front page should
-# o	provide information about the bakery
-# o	have links to pages where you can see
-# 	all cookies
-# 	all cakes
-# 	all muffins
+class bakery
+    def initialize :cakes :cookies :muffins
+
+        def cakes(description, price)
+            @description = description
+            @price = price
+        end 
+
+        def cookies(description, price)
+            @description = description
+            @price = price
+        end 
+
+        def muffins(description, price)
+            @description = description
+            @price = price
+        end 
+
+    end 
+end 
+
+
 # •	Each item sold should have
 # o	a description
 # o	a price
