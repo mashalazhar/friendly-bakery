@@ -1,5 +1,24 @@
-<p id="rcorners2">
-<img src="images/muffin1.jpg" alt="Muffin1">
-<img src="images/muffin2.jpg" alt="Muffin2">
-<img src="images/muffin3.jpg" alt="Muffin3">
-</p>
+<div class="flex-container">
+
+  <div>
+  <p><img src="images/muffin1.jpg" alt="Muffin1" style="width:100px;height:100px;">
+  <p><%= @bakery.muffins.first.description %></p>
+  <p><%= @bakery.muffins.first.name %></p>
+  <p><%= @bakery.muffins.first.price %></p>
+  </div>
+
+  <div>
+  <p><img src="images/muffin2.jpg" alt="Muffin2" style="width:100px;height:100px;">
+  <p><%= @bakery.muffins.first.description %></p>
+  <p><%= @bakery.muffins.first.name %></p>
+  <p><%= @bakery.muffins.first.price %></p>
+  </div>
+  
+  <div>
+  <p><img src="images/muffin3.jpg" alt="Muffin3" style="width:100px;height:100px;">
+  <p><%= @bakery.muffins.first.description %></p>
+  <p><%= @bakery.muffins.first.name %></p>
+  <p><%= @bakery.muffins.first.price %></p>
+  </div>  
+
+</div>

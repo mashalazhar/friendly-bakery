@@ -28,7 +28,8 @@ class Bakery
     end
 end  
 
-class Cookies 
+class Cookies
+    attr_accessor :name, :price, :description 
     def initialize(name,description,price)
         @name = name
         @description = description
@@ -37,6 +38,7 @@ class Cookies
 end
 
 class Muffins 
+    attr_accessor :name, :price, :description 
     def initialize(name,description,price)
         @name = name
         @description = description
@@ -45,18 +47,10 @@ class Muffins
 end
 
 class Cakes 
+    attr_accessor :name, :price, :description 
     def initialize(name,description,price)
         @name = name
         @description = description
         @price = price
     end
 end
-
-
-
-
-# Completion Requirements:
-# •	have a page listing all cookies sold
-# •	have a page listing all muffins sold
-# •	have a page listing all cakes sold
-# •	use the Sendgrid API to send an email to the user’s email with a catalog of all items sold

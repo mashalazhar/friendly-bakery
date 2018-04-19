@@ -7,7 +7,6 @@ include SendGrid
 
 @bakery = Bakery.new
 
-
 get '/index' do
     erb :index
 end
@@ -16,12 +15,12 @@ get '/cakes' do
     @bakery = Bakery.new
     chocolate_cake = Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28")
     redvelvet_cake = Cakes.new('Jessica Rabbit', 'Cocoa and Cream Cheese Goodness', "$28")
-    carrot_cake = Cakes.new('The Doc', 'Bugs Bunny Approved', "$28")
+    strawberry_shortcake = Cakes.new('Berries and Cream', 'Soft and Scrumptious', "$28")
     @bakery.addItem(chocolate_cake)
     @bakery.addItem(redvelvet_cake)
-    @bakery.addItem(carrot_cake)
+    @bakery.addItem(strawberry_shortcake)
   
-    pp @bakery
+    # pp @bakery
    
     erb :cakes
 end
@@ -35,7 +34,7 @@ get '/cookies' do
     @bakery.addItem(chocolate_chip_cookie)
     @bakery.addItem(macadamian_cookie)
 
-    pp @bakery
+    # pp @bakery
     
     erb :cookies
 end
@@ -49,7 +48,7 @@ get '/muffins' do
     @bakery.addItem(rasberry_muffin)
     @bakery.addItem(corn_muffin)
   
-    pp @bakery
+    # pp @bakery
     
     erb :muffins
 end
@@ -60,7 +59,7 @@ post '/contact' do
     from = Email.new(email: 'azhar.mashal@gmail.com')
     to = Email.new(email: 'azhar.mashal@gmail.com')
     subject = 'I would like to subscribe to Friendlys Bakery'
-    content = Content.new(type: 'text/plain', value: 'Hello. Thank you for subscribing')
+    content = Content.new(type: 'text/plain', value: @bakery)
     mail = SendGrid::Mail.new(from, subject, to, content)
 
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
