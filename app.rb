@@ -13,44 +13,46 @@ get '/index' do
 end
 
 get '/cakes' do
-    @cakes = Cakes.all
+    @bakery = Bakery.new
+    chocolate_cake = Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28")
+    redvelvet_cake = Cakes.new('Jessica Rabbit', 'Cocoa and Cream Cheese Goodness', "$28")
+    carrot_cake = Cakes.new('The Doc', 'Bugs Bunny Approved', "$28")
+    @bakery.addItem(chocolate_cake)
+    @bakery.addItem(redvelvet_cake)
+    @bakery.addItem(carrot_cake)
+  
+    pp @bakery
+   
     erb :cakes
 end
 
-chocolate_cake = Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28")
-redvelvet_cake = Cakes.new('Jessica Rabbit', 'Cocoa and Cream Cheese Goodness', "$28")
-carrot_cake = Cakes.new('The Doc', 'Bugs Bunny Approved', "$28")
-@bakery.addItem(chocolate_cake)
-@bakery.addItem(redvelvet_cake)
-@bakery.addItem(carrot_cake)
-pp @bakery
-
 get '/cookies' do
-    @cookies = Cookies.all
+    @bakery = Bakery.new
+    oatmealraisin_cookie = Cookies.new('The Oatmeal Raisin', 'Oats of Goodness', "$3")
+    chocolate_chip_cookie = Cookies.new('The Original', 'Chocolate Chip Galore', "$3")
+    macadamian_cookie = Cookies.new('The Nut', 'Macadamian and White Chocolate', "$3")
+    @bakery.addItem(oatmealraisin_cookie)
+    @bakery.addItem(chocolate_chip_cookie)
+    @bakery.addItem(macadamian_cookie)
+
+    pp @bakery
+    
     erb :cookies
 end
 
-oatmealraisin_cookie = Cookies.new('The Oatmeal Raisin', 'Oats of Goodness', "$3")
-chocolate_chip_cookie = Cookies.new('The Original', 'Chocolate Chip Galore', "$3")
-macadamian_cookie = Cookies.new('The Nut', 'Macadamian and White Chocolate', "$3")
-@bakery.addItem(oatmealraisin_cookie)
-@bakery.addItem(chocolate_chip_cookie)
-@bakery.addItem(macadamian_cookie)
-pp @bakery
-
 get '/muffins' do
-    @muffins = Muffins.all
+    @bakery = Bakery.new
+    blueberry_muffin = Muffins.new('I Got the Blueberries', 'Berry Good!', "$4")
+    rasberry_muffin = Muffins.new('Raisin Berries', 'Berry Delicious!', "$4")
+    corn_muffin = Muffins.new('Corns in the Field', 'The Perfect Breakfast', "$4")
+    @bakery.addItem(blueberry_muffin)
+    @bakery.addItem(rasberry_muffin)
+    @bakery.addItem(corn_muffin)
+  
+    pp @bakery
+    
     erb :muffins
 end
-
-blueberry_muffin = Muffins.new('I Got the Blueberries', 'Berry Good!', "$4")
-rasberry_muffin = Muffins.new('Raisin Berries', 'Berry Delicious!', "$4")
-corn_muffin = Muffins.new('Corns in the Field', 'The Perfect Breakfast', "$4")
-@bakery.addItem(blueberry_muffin)
-@bakery.addItem(chocolate_chip_cookie)
-@bakery.addItem(corn_muffin)
-pp @bakery
-
 
 post '/contact' do
     @email = params[:email]
