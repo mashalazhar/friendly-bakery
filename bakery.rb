@@ -1,3 +1,4 @@
+require "pp"
 p "start here"
 
 class Bakery  
@@ -9,25 +10,22 @@ class Bakery
     end
       
     def addItem(item)
-
         if item.class.name == "Cookies"
             p "Cookies Available"
             @cookies.push(item)
                 puts "I am adding a cookie."
-
-        # if @cookies[item.addItem]
-          
-        # elsif @muffins[item.addItem]
-        #     p "Muffins Available"
-        # @muffins.push(item)
-        #     puts "I am adding a muffin."
-        # else @cakes[item.addItem]
-        #     p "Cake Available"
-        # @cakes.push(item)
-        #     puts "I am adding a cake."
-        # end 
+        elsif item.class.name == "Muffins"
+            p "Muffins Available"
+            @muffins.push(item)
+                puts "I am adding a muffin."
+        elsif item.class.name ==  "Cakes"
+            p "Cake Available"
+            @cakes.push(item)
+                puts "I am adding a cake."
+        else
+            p "Nothing to shelf!"
+        end 
     end
-end
 end  
 
 class Cookies 
@@ -54,15 +52,18 @@ class Cakes
     end
 end
 
-chocolate_cake = Cakes.new('choccake', 'choccakeisgood', 25)
-mashals_bakery = Bakery.new
-mashals_bakery.addItem(chocolate_cake)
+# puts oatmeal_cookie = Cookies.new('The Oatmeal Raisin', 'Oats of Goodness', "$3")
+# mashals_bakery = Bakery.new
+# mashals_bakery.addItem(oatmeal_cookie)
 
-puts oatmeal = Cookies.new('thisisthename', 'thisisdescription', 35)
-mashals_bakery = Bakery.new
-mashals_bakery.addItem(oatmeal)
+# puts rasberry_muffin = Muffins.new('Raisin Berries', 'Berry Good!', "$4")
+# mashals_bakery = Bakery.new
+# mashals_bakery.addItem(rasberry_muffin)
 
-
+# chocolate_cake = Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28")
+# mashals_bakery = Bakery.new
+# mashals_bakery.addItem(chocolate_cake)
+# pp Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28")
 
 
 # # •	Each item sold should have
