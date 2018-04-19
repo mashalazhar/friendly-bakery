@@ -20,6 +20,7 @@ get '/cakes' do
     @bakery.addItem(redvelvet_cake)
     @bakery.addItem(strawberry_shortcake)
   
+    @allcakes = @bakery.cakes 
     # pp @bakery
    
     erb :cakes

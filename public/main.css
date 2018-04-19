@@ -75,7 +75,9 @@ div {
 
 /* NAV BAR */
 
-body {margin: 0;}
+body {
+  margin: 0;
+}
 
 ul.topnav {
     list-style-type: none;
@@ -140,7 +142,7 @@ img:hover {
 
 body {
   margin:0;
-  height:200px;
+  height:1300px;
 }
 
 .icon-bar {

@@ -1,24 +1,10 @@
-<div class="flex-container">
-
-  <div>
-  <p><img src="images/cake1.jpg" alt="Cake1" style="width:100px;height:100px;">
-  <p><%= @bakery.cakes.first.description %></p>
-  <p><%= @bakery.cakes.first.name %></p>
-  <p><%= @bakery.cakes.first.price %></p>
-  </div>
-
-  <div>
-  <p><img src="images/cake2.jpg" alt="Cake2" style="width:100px;height:100px;">
-  <p><%= @bakery.cakes.first.description %></p>
-  <p><%= @bakery.cakes.first.name %></p>
-  <p><%= @bakery.cakes.first.price %></p>
-  </div>
-  
-  <div>
-  <p><img src="images/cake3.jpg" alt="Cake3" style="width:100px;height:100px;">
-  <p><%= @bakery.cakes.first.description %></p>
-  <p><%= @bakery.cakes.first.name %></p>
-  <p><%= @bakery.cakes.first.price %></p>
-  </div>  
-
-</div>
+<% @allcakes.each do |element| %>
+    <div class="flex-container">
+      <div>
+      <p><img src="images/cake1.jpg" alt="Cake1" style="width:100px;height:100px;"></p>
+      <p><%= element.name %></p>
+      <p><%= element.description %></p>
+      <p><%= element.price %></p>
+      </div>
+    </div>
+  <%  end %>

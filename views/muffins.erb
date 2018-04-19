@@ -1,3 +1,14 @@
+<% @allmuffins.each do |element| %>
+  <div class="flex-container">
+    <div>
+    <p><img src="images/cake1.jpg" alt="Cake1" style="width:100px;height:100px;"></p>
+    <p><%= element.name %></p>
+    <p><%= element.description %></p>
+    <p><%= element.price %></p>
+    </div>
+  </div>
+<%  end %>
+
 <div class="flex-container">
 
   <div>
