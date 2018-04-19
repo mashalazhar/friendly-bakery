@@ -1,35 +1,10 @@
 <% @allcookies.each do |element| %>
   <div class="flex-container">
     <div>
-    <p><img src="images/cake1.jpg" alt="Cake1" style="width:100px;height:100px;"></p>
+    <p><img src="<%= element.photo%>"></p>
     <p><%= element.name %></p>
     <p><%= element.description %></p>
     <p><%= element.price %></p>
     </div>
   </div>
 <%  end %>
-
-<div class="flex-container">
-
-  <div>
-  <p><img src="images/cookie1.jpeg" alt="Cookies1" style="width:100px;height:100px;">
-  <p><%= @bakery.cookies.first.description %></p>
-  <p><%= @bakery.cookies.first.name %></p>
-  <p><%= @bakery.cookies.first.price %></p>
-  </div>
-
-  <div>
-  <p><img src="images/cookie2.jpg" alt="Cookies2" style="width:100px;height:100px;">
-  <p><%= @bakery.cookies.first.description %></p>
-  <p><%= @bakery.cookies.first.name %></p>
-  <p><%= @bakery.cookies.first.price %></p>
-  </div>
-  
-  <div>
-  <p><img src="images/cookie3.jpeg" alt="Cookies3" style="width:100px;height:100px;">
-  <p><%= @bakery.cookies.first.description %></p>
-  <p><%= @bakery.cookies.first.name %></p>
-  <p><%= @bakery.cookies.first.price %></p>
-  </div>  
-
-</div>

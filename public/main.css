@@ -32,7 +32,7 @@ h2 {
 }
 h3 { 
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
     font-size: 50px;
 }
 
@@ -85,6 +85,9 @@ ul.topnav {
     padding: 0;
     overflow: hidden;
     background-color: lightblue;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 ul.topnav li {float: left;}
@@ -142,7 +145,7 @@ img:hover {
 
 body {
   margin:0;
-  height:1300px;
+  height:1400px;
 }
 
 .icon-bar {
@@ -201,6 +204,25 @@ body {
 }
 
 .flex-container > div {
+  background-color: white;
+  width: 280px;
+  height: 270px;
+  margin: 10px;
+  text-align: center;
+  line-height: 10px;
+  font-size: 10px;
+}
+
+/* HOME GALLERY */
+
+.flex-container-home {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 50px;
+}
+
+.flex-container-home > div {
   background-color: white;
   width: 200px;
   height: 200px;

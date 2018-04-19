@@ -29,28 +29,31 @@ class Bakery
 end  
 
 class Cookies
-    attr_accessor :name, :price, :description 
-    def initialize(name,description,price)
+    attr_accessor :name, :price, :description, :photo
+    def initialize(name,description,price, photo)
         @name = name
         @description = description
         @price = price
+        @photo = photo
     end
 end
 
 class Muffins 
-    attr_accessor :name, :price, :description 
-    def initialize(name,description,price)
+    attr_accessor :name, :price, :description, :photo
+    def initialize(name,description,price, photo)
         @name = name
         @description = description
         @price = price
+        @photo = photo
     end
 end
 
 class Cakes 
-    attr_accessor :name, :price, :description 
-    def initialize(name,description,price)
+    attr_accessor :name, :price, :description, :photo 
+    def initialize(name,description,price, photo)
         @name = name
         @description = description
         @price = price
+        @photo = photo
     end
 end
