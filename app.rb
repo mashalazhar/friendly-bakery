@@ -11,9 +11,9 @@ end
 
 get '/cakes' do
     @bakery = Bakery.new
-    chocolate_cake = Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28", '/images/cake1.jpg')
+    chocolate_cake = Cakes.new('Brooklyn Blackout', 'Fudgin Delicious', "$28", '/images/cake3.jpg')
     redvelvet_cake = Cakes.new('Jessica Rabbit', 'Cocoa and Cream Cheese Goodness', "$28", '/images/cake2.jpg')
-    strawberry_shortcake = Cakes.new('Berries and Cream', 'Soft and Scrumptious', "$28", '/images/cake3.jpg')
+    strawberry_shortcake = Cakes.new('Berries and Cream', 'Soft and Scrumptious', "$28", '/images/cake1.jpg')
     @bakery.addItem(chocolate_cake)
     @bakery.addItem(redvelvet_cake)
     @bakery.addItem(strawberry_shortcake)
